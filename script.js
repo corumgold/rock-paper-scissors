@@ -19,7 +19,7 @@ if (userChoice == "ROCK" && compChoice == "PAPER" ||
     userChoice == "SCISSORS" && compChoice == "ROCK" ||
     userChoice == "PAPER" && compChoice == "SCISSORS") {
     compScore++;
-    alert("The computer won that round! Better luck next time!")
+    alert(`The computer won that round! It picked ${compChoice}.`)
 }
 // Else if userChoice == ROCK & compChoice == SCISSORS -- increment userScore by 1
 // Else if userChoice == SCISSORS & compChoice == PAPER -- increment userScore by 1
@@ -28,6 +28,8 @@ else if (userChoice == "ROCK" && compChoice == "SCISSORS" ||
     userChoice == "SCISSORS" && compChoice == "PAPER" ||
     userChoice == "PAPER" && compChoice == "ROCK") {
     userScore++;
-    alert("YOU won that round! Nicely done!")
+    alert(`YOU won that round! The computer picked ${compChoice}.`)
+} else {
+    alert(`It's a tie! The computer picked ${compChoice}`)
 }
 // Else notify user that this round is a draw.
