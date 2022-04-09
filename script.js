@@ -49,3 +49,5 @@ function playGame(){
 
      alert(`Game over! Final score is... Computer: ${compScore} You: ${userScore}`)
 }
+
+playGame()
