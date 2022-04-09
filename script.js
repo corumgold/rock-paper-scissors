@@ -20,22 +20,24 @@ function userPlay() {
 const userChoice = userPlay();
 const compChoice = computerPlay();
 
-// function playRound(){
+function playRound(){
 
-// if (userChoice == "ROCK" && compChoice == "PAPER" ||
-//     userChoice == "SCISSORS" && compChoice == "ROCK" ||
-//     userChoice == "PAPER" && compChoice == "SCISSORS") {
-//     compScore++;
-//     alert(`The computer won that round! It picked ${compChoice}.`)
-// }
+if (userChoice == "ROCK" && compChoice == "PAPER" ||
+    userChoice == "SCISSORS" && compChoice == "ROCK" ||
+    userChoice == "PAPER" && compChoice == "SCISSORS") {
+    compScore++;
+    alert(`The computer won that round! It picked ${compChoice}.`)
+}
 
-// else if (userChoice == "ROCK" && compChoice == "SCISSORS" ||
-//     userChoice == "SCISSORS" && compChoice == "PAPER" ||
-//     userChoice == "PAPER" && compChoice == "ROCK") {
-//     userScore++;
-//     alert(`YOU won that round! The computer picked ${compChoice}.`)
+else if (userChoice == "ROCK" && compChoice == "SCISSORS" ||
+    userChoice == "SCISSORS" && compChoice == "PAPER" ||
+    userChoice == "PAPER" && compChoice == "ROCK") {
+    userScore++;
+    alert(`YOU won that round! The computer picked ${compChoice}.`)
 
-// } else {
-//     alert(`It's a tie! The computer picked ${compChoice}`)
-// }
-// }
+} else {
+    alert(`It's a tie! The computer picked ${compChoice}`)
+}
+}
+
+playRound()
