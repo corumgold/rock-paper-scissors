@@ -8,13 +8,11 @@ function computerPlay() {
     return compChoice;
 }
 
-computerPlay()
-
-
-// let input = prompt("Pick 'ROCK,' 'PAPER,' or 'SCISSORS'")
-
-// let userChoice = input.toUpperCase();
-// console.log(userChoice)
+function userPlay() {
+    let input = prompt("Pick 'ROCK,' 'PAPER,' or 'SCISSORS'")
+    let userChoice = input.toUpperCase();
+    return userChoice;
+}
 
 // if (userChoice == "ROCK" && compChoice == "PAPER" ||
 //     userChoice == "SCISSORS" && compChoice == "ROCK" ||
