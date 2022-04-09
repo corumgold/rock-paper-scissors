@@ -2,17 +2,25 @@
 let userScore = 0;
 let compScore = 0;
 
+// computer's selection
+
 function computerPlay() {
     let choices = ['ROCK', 'PAPER', 'SCISSORS'];
-    let compChoice = choices[Math.floor(Math.random() * choices.length)];
-    return compChoice;
+    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    return computerChoice;
 }
+
 
 function userPlay() {
     let input = prompt("Pick 'ROCK,' 'PAPER,' or 'SCISSORS'")
-    let userChoice = input.toUpperCase();
-    return userChoice;
+    let playerChoice = input.toUpperCase();
+    return playerChoice;
 }
+
+const userChoice = userPlay();
+const compChoice = computerPlay();
+
+// function playRound(){
 
 // if (userChoice == "ROCK" && compChoice == "PAPER" ||
 //     userChoice == "SCISSORS" && compChoice == "ROCK" ||
@@ -29,4 +37,5 @@ function userPlay() {
 
 // } else {
 //     alert(`It's a tie! The computer picked ${compChoice}`)
+// }
 // }
