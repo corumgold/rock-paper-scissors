@@ -2,25 +2,26 @@
 let userScore = 0;
 let compScore = 0;
 
-// computer's selection
-
+// Computer makes a random selection
 function computerPlay() {
     let choices = ['ROCK', 'PAPER', 'SCISSORS'];
     let computerChoice = choices[Math.floor(Math.random() * choices.length)];
     return computerChoice;
 }
 
-
+// Player makes a selection from prompt
 function userPlay() {
     let input = prompt("Pick 'ROCK,' 'PAPER,' or 'SCISSORS'")
-    let playerChoice = input.toUpperCase();
-    return playerChoice;
+    let userChoice = input.toUpperCase();
+    return userChoice;
 }
 
+function playRound(){
+// Create variables from player's and computer's choices frunctions
 const userSelection = userPlay();
 const computerSelection = computerPlay();
 
-function playRound(){
+// Round of rock paper scissors is played
 
 if (userSelection == "ROCK" && computerSelection == "PAPER" ||
     userSelection == "SCISSORS" && computerSelection == "ROCK" ||
@@ -40,4 +41,11 @@ else if (userSelection == "ROCK" && computerSelection == "SCISSORS" ||
 }
 }
 
-playRound()
+function playGame(){
+    for (let i = 0; i < 5; i++) {
+       playRound()
+       alert(`Computer: ${compScore} You: ${userScore}`)
+     }
+
+     alert(`Game over! Final score is... Computer: ${compScore} You: ${userScore}`)
+}
