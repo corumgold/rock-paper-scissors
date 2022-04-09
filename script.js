@@ -17,26 +17,26 @@ function userPlay() {
     return playerChoice;
 }
 
-const userChoice = userPlay();
-const compChoice = computerPlay();
+const userSelection = userPlay();
+const computerSelection = computerPlay();
 
 function playRound(){
 
-if (userChoice == "ROCK" && compChoice == "PAPER" ||
-    userChoice == "SCISSORS" && compChoice == "ROCK" ||
-    userChoice == "PAPER" && compChoice == "SCISSORS") {
+if (userSelection == "ROCK" && computerSelection == "PAPER" ||
+    userSelection == "SCISSORS" && computerSelection == "ROCK" ||
+    userSelection == "PAPER" && computerSelection == "SCISSORS") {
     compScore++;
-    alert(`The computer won that round! It picked ${compChoice}.`)
+    alert(`The computer won that round! It picked ${computerSelection}.`)
 }
 
-else if (userChoice == "ROCK" && compChoice == "SCISSORS" ||
-    userChoice == "SCISSORS" && compChoice == "PAPER" ||
-    userChoice == "PAPER" && compChoice == "ROCK") {
+else if (userSelection == "ROCK" && computerSelection == "SCISSORS" ||
+    userSelection == "SCISSORS" && computerSelection == "PAPER" ||
+    userSelection == "PAPER" && computerSelection == "ROCK") {
     userScore++;
-    alert(`YOU won that round! The computer picked ${compChoice}.`)
+    alert(`YOU won that round! The computer picked ${computerSelection}.`)
 
 } else {
-    alert(`It's a tie! The computer picked ${compChoice}`)
+    alert(`It's a tie! The computer picked ${computerSelection}`)
 }
 }
 
