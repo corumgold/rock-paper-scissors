@@ -17,11 +17,17 @@ console.log(userChoice)
 // Else if userChoice == PAPER & compChoice == SCISSORS -- increment compScore by 1
 if (userChoice == "ROCK" && compChoice == "PAPER" ||
     userChoice == "SCISSORS" && compChoice == "ROCK" ||
-    userChoice == "PAPER" && compChoice == "SCISSORS"){
-        compScore ++;
-        alert("The computer won that round!")
-    }
+    userChoice == "PAPER" && compChoice == "SCISSORS") {
+    compScore++;
+    alert("The computer won that round! Better luck next time!")
+}
 // Else if userChoice == ROCK & compChoice == SCISSORS -- increment userScore by 1
 // Else if userChoice == SCISSORS & compChoice == PAPER -- increment userScore by 1
 // Else if userChoice == PAPER & compChoice == ROCK -- increment userScore by 1
+else if (userChoice == "ROCK" && compChoice == "SCISSORS" ||
+    userChoice == "SCISSORS" && compChoice == "PAPER" ||
+    userChoice == "PAPER" && compChoice == "ROCK") {
+    userScore++;
+    alert("YOU won that round! Nicely done!")
+}
 // Else notify user that this round is a draw.
