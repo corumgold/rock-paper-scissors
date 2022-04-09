@@ -29,7 +29,7 @@ else if (userChoice == "ROCK" && compChoice == "SCISSORS" ||
     userChoice == "PAPER" && compChoice == "ROCK") {
     userScore++;
     alert(`YOU won that round! The computer picked ${compChoice}.`)
+// Else notify user that this round is a draw.
 } else {
     alert(`It's a tie! The computer picked ${compChoice}`)
 }
-// Else notify user that this round is a draw.
