@@ -15,36 +15,41 @@ function userPlay() {
     return userChoice;
 }
 
-function playRound(){
+function playRound() {
 
-const userSelection = userPlay();
-const computerSelection = computerPlay();
+    const userSelection = userPlay();
+    const computerSelection = computerPlay();
 
-if (userSelection == "ROCK" && computerSelection == "PAPER" ||
-    userSelection == "SCISSORS" && computerSelection == "ROCK" ||
-    userSelection == "PAPER" && computerSelection == "SCISSORS") {
-    compScore++;
-    alert(`The computer won that round! It picked ${computerSelection}.`)
+    if (userSelection == "ROCK" && computerSelection == "PAPER" ||
+        userSelection == "SCISSORS" && computerSelection == "ROCK" ||
+        userSelection == "PAPER" && computerSelection == "SCISSORS") {
+        compScore++;
+        alert(`The computer won that round! It picked ${computerSelection}.`)
+    }
+
+    else if (userSelection == "ROCK" && computerSelection == "SCISSORS" ||
+        userSelection == "SCISSORS" && computerSelection == "PAPER" ||
+        userSelection == "PAPER" && computerSelection == "ROCK") {
+        userScore++;
+        alert(`YOU won that round! The computer picked ${computerSelection}.`)
+
+    } else {
+        alert(`It's a tie! The computer picked ${computerSelection}`)
+    }
 }
 
-else if (userSelection == "ROCK" && computerSelection == "SCISSORS" ||
-    userSelection == "SCISSORS" && computerSelection == "PAPER" ||
-    userSelection == "PAPER" && computerSelection == "ROCK") {
-    userScore++;
-    alert(`YOU won that round! The computer picked ${computerSelection}.`)
+function playGame() {
+    while (compScore < 5 && userScore < 5) {
+        playRound()
+        alert(`Computer: ${compScore} You: ${userScore}`)
+    }
 
-} else {
-    alert(`It's a tie! The computer picked ${computerSelection}`)
-}
-}
+    if (compScore === 5) {
+        alert(`Sorry, you lose! Final score is... Computer: ${compScore} You: ${userScore}`)
+    } else {
+        alert(`Congratulations! You win! Final score is... Computer: ${compScore} You: ${userScore}`)
 
-function playGame(){
-    for (let i = 0; i < 5; i++) {
-       playRound()
-       alert(`Computer: ${compScore} You: ${userScore}`)
-     }
-
-     alert(`Game over! Final score is... Computer: ${compScore} You: ${userScore}`)
+    }
 }
 
 playGame()
