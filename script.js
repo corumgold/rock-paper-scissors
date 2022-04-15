@@ -38,6 +38,8 @@ function playRound() {
     }
 }
 
+
+// Game is over after someone wins 2 out of 3
 function playGame() {
     while (compScore < 5 && userScore < 5) {
         playRound()
