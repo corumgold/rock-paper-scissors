@@ -41,12 +41,12 @@ function playRound() {
 
 // Game is over after someone wins 2 out of 3
 function playGame() {
-    while (compScore < 5 && userScore < 5) {
+    while (compScore < 2 && userScore < 2) {
         playRound()
         alert(`Computer: ${compScore} You: ${userScore}`)
     }
 
-    if (compScore === 5) {
+    if (compScore === 2) {
         alert(`Sorry, you lose! Final score is... Computer: ${compScore} You: ${userScore}`)
     } else {
         alert(`Congratulations! You win! Final score is... Computer: ${compScore} You: ${userScore}`)
