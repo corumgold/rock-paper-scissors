@@ -9,11 +9,6 @@ function computerPlay() {
     return computerChoice;
 }
 
-function userPlay(userChoice) {
-return userChoice;
-}
-
-
 function playRound(userSelection) {
 
     const computerSelection = computerPlay();
@@ -37,14 +32,20 @@ function playRound(userSelection) {
 }
 
 
-let rockBtn = document.getElementById('rock');
-rockBtn.addEventListener('click', playRound('ROCK'));
+let rockBtn = document.querySelector('#rock'); 
+rockBtn.addEventListener('click', () => {
+    playRound('ROCK'); //run the function with rock on click
+});
 
-let paperBtn = document.getElementById('paper');
-rockBtn.addEventListener('click', playRound('PAPER'));
+let paperBtn = document.querySelector('#paper'); 
+paperBtn.addEventListener('click', () =>{
+    playRound('PAPER'); //run the function with paper on click
+});
 
-let scissorsBtn = document.getElementById('scissors');
-rockBtn.addEventListener('click', playRound('SCISSORS'));
+let scissorsBtn = document.querySelector('#scissors'); 
+scissorsBtn.addEventListener('click', () => {
+    playRound('SCISSORS'); //run the function with scissors on click
+});
 
 // // Game is over after someone wins 2 out of 3
 // function playGame() {
