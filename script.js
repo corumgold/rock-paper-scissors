@@ -9,15 +9,13 @@ function computerPlay() {
     return computerChoice;
 }
 
-function userPlay() {
-    let input = prompt("Pick 'ROCK,' 'PAPER,' or 'SCISSORS'")
-    let userChoice = input.toUpperCase();
-    return userChoice;
+function userPlay(userChoice) {
+return userChoice;
 }
 
-function playRound() {
 
-    const userSelection = userPlay();
+function playRound(userSelection) {
+
     const computerSelection = computerPlay();
 
     if (userSelection == "ROCK" && computerSelection == "PAPER" ||
@@ -39,19 +37,26 @@ function playRound() {
 }
 
 
-// Game is over after someone wins 2 out of 3
-function playGame() {
-    while (compScore < 2 && userScore < 2) {
-        playRound()
-        alert(`Computer: ${compScore} You: ${userScore}`)
-    }
+let rockBtn = document.getElementById('rock');
+rockBtn.addEventListener('click', playRound('ROCK'));
 
-    if (compScore === 2) {
-        alert(`Sorry, you lose! Final score is... Computer: ${compScore} You: ${userScore}`)
-    } else {
-        alert(`Congratulations! You win! Final score is... Computer: ${compScore} You: ${userScore}`)
+let paperBtn = document.getElementById('paper');
+rockBtn.addEventListener('click', playRound('PAPER'));
 
-    }
-}
+let scissorsBtn = document.getElementById('scissors');
+rockBtn.addEventListener('click', playRound('SCISSORS'));
 
-playGame()
+// // Game is over after someone wins 2 out of 3
+// function playGame() {
+//     while (compScore < 2 && userScore < 2) {
+//         playRound()
+//         alert(`Computer: ${compScore} You: ${userScore}`)
+//     }
+
+//     if (compScore === 2) {
+//         alert(`Sorry, you lose! Final score is... Computer: ${compScore} You: ${userScore}`)
+//     } else {
+//         alert(`Congratulations! You win! Final score is... Computer: ${compScore} You: ${userScore}`)
+
+//     }
+// }
