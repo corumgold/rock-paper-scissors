@@ -29,6 +29,8 @@ function playRound(userSelection) {
     } else {
         alert(`It's a tie! The computer picked ${computerSelection}`)
     }
+
+    modal.style.display = "block";
 }
 
 
@@ -46,6 +48,9 @@ let scissorsBtn = document.querySelector('#scissors');
 scissorsBtn.addEventListener('click', () => {
     playRound('SCISSORS'); //run the function with scissors on click
 });
+
+// score modal
+let modal = document.querySelector("#score-modal");
 
 // // Game is over after someone wins 2 out of 3
 // function playGame() {
