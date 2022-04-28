@@ -17,17 +17,17 @@ function playRound(userSelection) {
         userSelection == "SCISSORS" && computerSelection == "ROCK" ||
         userSelection == "PAPER" && computerSelection == "SCISSORS") {
         compScore++;
-        alert(`The computer won that round! It picked ${computerSelection}.`)
+        compWinMessage.style.display = "block";
     }
 
     else if (userSelection == "ROCK" && computerSelection == "SCISSORS" ||
         userSelection == "SCISSORS" && computerSelection == "PAPER" ||
         userSelection == "PAPER" && computerSelection == "ROCK") {
         userScore++;
-        alert(`YOU won that round! The computer picked ${computerSelection}.`)
+        playerWinMessage.style.display = "block";
 
     } else {
-        alert(`It's a tie! The computer picked ${computerSelection}`)
+        tie.style.display = "block"
     }
 
     modal.style.display = "flex";
@@ -52,9 +52,17 @@ scissorsBtn.addEventListener('click', () => {
 // score modal
 let modal = document.querySelector("#score-modal");
 let closeModal = document.querySelector("#close-modal");
-closeModal.addEventListener('click', () => {
+let compWinMessage = document.querySelector("#computer-wins");
+let playerWinMessage = document.querySelector("#player-wins");
+let tie = document.querySelector("#tie");
+//hide modal and all text content
+closeModal.addEventListener('click', () => { 
     modal.style.display = "none";
+    compWinMessage.style.display = "none"; 
+    playerWinMessage.style.display = "none"; 
+    tie.style.display = "none"; 
 })
+
 
 // // Game is over after someone wins 2 out of 3
 // function playGame() {

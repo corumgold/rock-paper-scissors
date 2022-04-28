@@ -1,11 +1,11 @@
 body {
-    font-family: 'Schoolbell', cursive;
+    font-family     : 'Schoolbell', cursive;
     background-color: rgb(39, 76, 67);
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin          : 0;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
 }
 
 .title {
@@ -13,57 +13,62 @@ body {
     justify-content: center;
     align-items    : center;
     flex-direction : column;
-    margin: 3em;
+    margin         : 3em;
 }
 
 h1 {
-    color: pink;
+    color    : pink;
     font-size: 3em;
-    margin: 0;
+    margin   : 0;
 }
 
-h2{
-    color: paleturquoise;
+h2 {
+    color    : paleturquoise;
     font-size: 2em;
 }
 
 .buttons {
-    display        : flex;
-    justify-content: center;
-    padding: 1em;
+    display         : flex;
+    justify-content : center;
+    padding         : 1em;
     background-color: #31343a;
-    border: 10px solid #804c36;
-    border-radius: 10px;
+    border          : 10px solid #804c36;
+    border-radius   : 10px;
 }
 
 button {
-    background: none;
-    border    : none;
-    cursor    : pointer;
+    background : none;
+    border     : none;
+    cursor     : pointer;
     font-family: 'Schoolbell', cursive;
-    color: white;
+    color      : white;
 }
 
 .buttons button {
-    font-size : 4em;
-    margin    : 0 .25em;
+    font-size: 4em;
+    margin   : 0 .25em;
 }
 
-#score-modal{
-    display: none;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 150px;
-    color: white;
+#score-modal {
+    display         : none;
+    position        : fixed;
+    justify-content : center;
+    align-items     : center;
+    width           : 300px;
+    height          : 150px;
+    color           : white;
     background-color: #31343a;
-    border: 10px solid #804c36;
-    border-radius: 10px;
+    border          : 10px solid #804c36;
+    border-radius   : 10px;
 }
 
-#close-modal{
-    position: fixed;
+#score-modal p {
+    /* hide the score messages until player makes a choice */
+    display: none; 
+}
+
+#close-modal {
+    position   : fixed;
     margin-left: 225px;
-    margin-top: 120px;
+    margin-top : 120px;
 }
