@@ -30,7 +30,7 @@ function playRound(userSelection) {
         alert(`It's a tie! The computer picked ${computerSelection}`)
     }
 
-    modal.style.display = "block";
+    modal.style.display = "flex";
 }
 
 
@@ -51,6 +51,10 @@ scissorsBtn.addEventListener('click', () => {
 
 // score modal
 let modal = document.querySelector("#score-modal");
+let closeModal = document.querySelector("#close-modal");
+closeModal.addEventListener('click', () => {
+    modal.style.display = "none";
+})
 
 // // Game is over after someone wins 2 out of 3
 // function playGame() {
