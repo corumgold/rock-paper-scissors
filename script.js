@@ -17,6 +17,7 @@ function playRound(userSelection) {
         userSelection == "SCISSORS" && computerSelection == "ROCK" ||
         userSelection == "PAPER" && computerSelection == "SCISSORS") {
         compScore++;
+        computerScore.append("|");
         compWinMessage.style.display = "block";
     }
 
@@ -24,6 +25,7 @@ function playRound(userSelection) {
         userSelection == "SCISSORS" && computerSelection == "PAPER" ||
         userSelection == "PAPER" && computerSelection == "ROCK") {
         userScore++;
+        playerScore.append("|");
         playerWinMessage.style.display = "block";
 
     } else {
@@ -52,6 +54,8 @@ scissorsBtn.addEventListener('click', () => {
 // score modal
 let modal = document.querySelector("#score-modal");
 let closeModal = document.querySelector("#close-modal");
+let playerScore = document.querySelector("#player-score");
+let computerScore = document.querySelector("#computer-score");
 let compWinMessage = document.querySelector("#computer-wins");
 let playerWinMessage = document.querySelector("#player-wins");
 let tie = document.querySelector("#tie");
