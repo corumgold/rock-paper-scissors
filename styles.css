@@ -46,7 +46,6 @@ button {
 
 .buttons button {
     font-size : 4em;
-    
     margin    : 0 .25em;
 }
 
@@ -61,4 +60,10 @@ button {
     background-color: #31343a;
     border: 10px solid #804c36;
     border-radius: 10px;
+}
+
+#close-modal{
+    position: fixed;
+    margin-left: 225px;
+    margin-top: 120px;
 }
