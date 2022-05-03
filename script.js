@@ -1,7 +1,6 @@
 
 let userScore = 0;
 let compScore = 0;
-
 // Random computer selection
 function computerPlay() {
     let choices = ['ROCK', 'PAPER', 'SCISSORS'];
@@ -10,9 +9,7 @@ function computerPlay() {
 }
 
 function playRound(userSelection) {
-
     const computerSelection = computerPlay();
-
     if (userSelection == "ROCK" && computerSelection == "PAPER" ||
         userSelection == "SCISSORS" && computerSelection == "ROCK" ||
         userSelection == "PAPER" && computerSelection == "SCISSORS") {
@@ -20,18 +17,15 @@ function playRound(userSelection) {
         computerScore.append("|");
         compWinMessage.style.display = "block";
     }
-
     else if (userSelection == "ROCK" && computerSelection == "SCISSORS" ||
         userSelection == "SCISSORS" && computerSelection == "PAPER" ||
         userSelection == "PAPER" && computerSelection == "ROCK") {
         userScore++;
         playerScore.append("|");
         playerWinMessage.style.display = "block";
-
     } else {
         tie.style.display = "block"
     }
-
     modal.style.display = "flex";
 }
 
